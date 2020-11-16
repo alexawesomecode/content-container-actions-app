@@ -8,8 +8,8 @@ jobs:
     - name: checking
       uses: actions/checkout@v2
     - name: Hello world action step
+      uses: ./ # Uses an action in the root directory
       id: hello
-      uses: ./
       with:
         who-to-greet: 'alex awesomecode'
     # Use the output from the `hello` step
