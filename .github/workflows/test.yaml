@@ -6,7 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     name: setting up execution
     steps:
-      uses: actions/checkout@v2
-    - name: node setup
-      uses: actions/setup-node@v1
-      run: npm install &&  npm test
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: node
+        uses: actions/setup-node@v1
+      - name: run
+        run: npm install &&  npm test
